@@ -1,0 +1,560 @@
+@charset "utf-8";
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a 
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul 
+{
+    list-style: none;
+}
+
+img 
+{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.cf::after 
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.blind
+{
+    position: absolute;
+    width:1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent:-9999px;
+    font-size:0px;
+    line-height: 0px;
+}
+
+/* 헤더스타일 시작 */
+#header 
+{
+    /* position: fixed; position: absolute를 사용하면 블록요소의 기본값인 width:100%가 적용안됨 */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 0px 40px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+}
+
+#header>h1 
+{
+    float: left;
+    width: 50px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+#header #nav 
+{
+    float: right;
+    position: relative;
+    /* calc 사용시에 마이너스 기호 앞뒤에 반드시 띄워쓰기 할 것 ex)calc(100% - 90px)*/
+    width: calc(100% - 90px);
+}
+
+#header>#nav>.depth1>li 
+{
+    display: inline-block;
+}
+
+#header #nav .depth1>li>a 
+{
+    display: inline-block;
+    padding: 40px 0;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#header #nav .depth1>li+li>a 
+{
+    padding-left: 24px;
+}
+
+#header>#nav>.membership 
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -17px;
+}
+
+#header>#nav>.membership>a 
+{
+    font-size: 14px;
+    padding: 6px 16px 8px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+#header>#nav>.membership>a:first-child 
+{
+    margin-right: 40px;
+    border: none;
+    padding: 7px 0px;
+}
+
+#header>#nav>.membership>a:first-child:hover 
+{
+    color: #00754a;
+}
+
+#header>#nav>.membership>a:nth-child(2) 
+{
+    margin-right: 16px;
+    transition: all 0.5s;
+}
+
+#header>#nav>.membership>a:nth-child(2):hover 
+{
+    background: rgba(0, 0, 0, 0.06);
+}
+
+#header>#nav>.membership>a:last-child 
+{
+    background: #000;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+#header>#nav>.membership>a:last-child:hover 
+{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* 헤더스타일 끝 */
+
+
+/* 메인구역 스타일 시작 */
+#main 
+{
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+#main .startorder
+{
+    position: fixed;
+    bottom: 50px;
+    right: 80px;
+    z-index: 99;
+}
+
+#main .startorder a
+{
+    display: block;
+    font-size: 19px;
+    padding: 18px 24px;
+    background: #00a862;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0px 0px 6px rgba( 0, 0, 0, 0.24 ), 0px 8px 12px rgba(0, 0, 0, 0.14);
+}
+
+#main .welcome-msg 
+{
+    position: fixed;
+    width: 40%;
+    left: 0;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24), 0 4px 4px rgba(0, 0, 0, 0.12);
+}
+
+#main .welcome-msg .text 
+{
+    padding: 0 131px;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 40vh;
+}
+
+#main #container 
+{
+    width: 60%;
+    margin-left: 40%;
+    padding: 20px 0px;
+}
+
+/* rewards 시작 */
+#container .rewards 
+{
+    padding: 0 40px;
+}
+
+#container .rewards h2 
+{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#container .rewards ul 
+{
+    overflow: hidden;
+}
+
+#container .rewards li 
+{
+    float: left;
+    width: 32.3333%;
+}
+
+#container .rewards li:nth-child(2) 
+{
+    margin: 0 1.5%;
+}
+
+#container>.rewards li>img 
+{
+    border-radius: 15px;
+}
+
+#container .rewards li>p 
+{
+    font-size: 19px;
+    padding-top: 24px;
+}
+
+#container .btn 
+{
+    padding: 24px 0;
+}
+
+#container .btn a 
+{
+    font-size: 14px;
+    padding: 6px 16px 8px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#container .btn a:first-child 
+{
+    background: #000;
+    color: #fff;
+}
+/* rewards 끝 */
+
+/* order 시작 */
+#container .order 
+{
+    background: #f9f9f9;
+    padding: 40px 0 80px;
+}
+
+#container .order > div 
+{
+    border-radius: 30px;
+    background: #fff;
+    width: 500px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    box-shadow: 0 0 0.5px 0 rgb(0, 0, 0, 0.14), 0 1px 1px 0 rgb(0, 0, 0, 0.24);
+}
+
+#container .order .order1 
+{
+    padding: 20px;
+}
+
+#container .order .order1>div:first-child 
+{
+    position: relative;
+    padding-bottom: 16px;
+}
+
+#container .order .order1 .answer 
+{
+    width: 80%;
+    font-size: 28px;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+
+#container .order .order1 .beta 
+{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 13px;
+    color: #dd92c0;
+    letter-spacing: 0.5em;
+    font-weight: bold;
+}
+
+#container .order .order1>div:nth-child(2) 
+{
+    font-size: 16px;
+    border-top: 1px solid #999;
+    padding: 16px 0px;
+}
+
+#container .order .order1>div:nth-child(3)>a 
+{
+    display: block;
+    background: #d4e9e2;
+    border-radius: 20px;
+    position: relative;
+    padding: 30px 16px;
+    font-size: 19px;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+
+#container .order .order1>div:nth-child(3)>a:first-child 
+{
+    margin-bottom: 20px;
+}
+
+#container .order .order1>div:nth-child(3)>a>strong 
+{
+    display: block;
+}
+
+#container .order .order1>div:nth-child(3)>a>img 
+{
+    position: absolute;
+    bottom: -10px;
+}
+
+#container .order .order1>div:nth-child(3)>a:first-child>img 
+{
+    width: 63px;
+    right: 20px;
+}
+
+#container .order .order1>div:nth-child(3)>a:last-child>img 
+{
+    width: 85px;
+    right: -5px;
+}
+
+#container .order .buy>div 
+{
+    padding: 24px;
+}
+
+#container .order .buy>div h3 
+{
+    font-size: 19px;
+}
+
+#container .order .buy>div p 
+{
+    font-size: 16px;
+    padding: 16px 0;
+}
+
+#container .order .buy>div a 
+{
+    display: inline-block;
+    font-size: 16px;
+    color: #00754a;
+    border: 1px solid #00754a;
+    border-radius: 50px;
+    padding: 6px 16px 8px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+/* #container .order .buy>div a:hover
+{
+    background: rgba(235, 244, 241);
+}
+*/
+
+#container .order .order3>div a:hover
+{
+    background: rgba(235, 244, 241);
+}
+/* order 끝 */
+
+/* company-info 시작 */
+#container .company-info
+{
+    padding: 48px 40px 32px;
+    background: #fff;
+}
+
+#container .company-info .depth1
+{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#container .company-info .depth1 > li 
+{
+    margin-bottom: 20px;
+}
+
+#container .company-info .depth1 > li >a
+{
+    display: block;
+    font-size: 19px;
+    padding: 20px 0px;
+    position: relative;
+}
+
+#container .company-info .depth1 > li > a::after
+{
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 15.5px;
+    margin-top: -9.5px;
+    transition: all 0.5s;
+}
+
+#container .company-info .depth1 > li > a:hover::after
+{
+    transform: rotate(-180deg);
+    /* content: '\f077'; */
+}
+
+#container .company-info .depth1 > li > a::before
+{
+   content: '';
+   position: absolute;
+   top: 50%;
+   right: 0%;
+   margin-top: -25px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   transition: all 0.5s;
+}
+
+#container .company-info .depth1 > li > a:hover::before
+{
+    background: #ddd;
+}
+
+#container .company-info .depth2
+{
+    display: none;
+}
+
+#container .company-info .depth2 > li
+{
+    margin-bottom: 8px;
+}
+
+#container .company-info .depth2 > li > a
+{
+    display: inline-block;
+    padding: 8px 0px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.58);
+}
+
+#container .company-info .depth2 > li > a:hover
+{
+    color: rgba(0, 0, 0, 1);
+}
+
+/* footer 구역 */
+#container .footer
+{
+    padding: 0px 40px 100px;
+}
+
+#container .footer .sns a
+{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: 10px;
+}
+
+#container .footer .sns a::after
+{
+    content: '';
+    position: absolute;
+    /* width: 48px;
+    height: 48px; */
+    border-radius: 50%;
+    background: #ddd;
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    /* margin-top:-24px;
+    margin-left:-24px; */
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+#container .footer .sns a:hover::after
+{
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+}
+
+#container .footer .sns a+a
+{
+    margin-left:15px;
+}
+
+#container .footer .sns a:first-child
+{
+    font-size: 33px;
+    background: #fff;
+    color: #000;
+}
+
+#container .footer .bmenu li a
+{
+    font-size: 16px;
+    padding: 8px 0px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+#container .footer .bmenu li a:hover
+{
+    text-decoration: underline;
+}
+
+#container .footer .copyright
+{
+    font-size: 14px;
+    padding: 16px 0px;
+    color: rgba(0, 0, 0, 0.6);
+}
